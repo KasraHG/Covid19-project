@@ -1,5 +1,12 @@
 COVID-19 Data Analysis Queries
-This project involves analyzing COVID-19 data to extract key insights, including death rates, infection rates, and vaccination progress across various locations and continents. The queries are based on two datasets: coviddeaths and covidvaccinations.
+This project involves analyzing COVID-19 data to extract key insights, including death rates, infection rates, and vaccination progress across various locations and continents. The queries are based on two datasets: coviddeaths and covidvaccinations.\
+
+## Tableau Project: COVID-19 Dashboard
+
+I have visualized COVID-19 data in Tableau. You can explore the project by clicking on the link below:
+
+[View the Tableau project on Tableau Public](https://public.tableau.com/app/profile/kasra.hosseini/viz/CovidDashboard_17434919896530/Coviddashboard?publish=yes)
+
 
 Key Queries
 Below is a collection of queries used to explore COVID-19 data and generate insights.
