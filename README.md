@@ -163,6 +163,46 @@ WHERE dea.continent IS NOT NULL;
 
 SELECT * FROM Percentagepopulationvaccinated;
 ```
-Summary
-This project performs various COVID-19 data analysis tasks using SQL queries to uncover key insights related to death rates, infection rates, and vaccination progress across different locations and continents. Key techniques such as joins, window functions, common table expressions (CTEs), temporary tables, and views are utilized to handle and manipulate data efficiently.
+
+13. Total Death Count by Non-Country Entities (e.g., Continents)
+``` sql
+Copy
+Edit
+SELECT Location, SUM(CAST(new_deaths AS INT)) AS TotalDeathCount
+FROM coviddeaths
+WHERE continent IS NULL
+  AND location NOT IN ('World', 'European Union', 'International')
+GROUP BY location
+ORDER BY TotalDeathCount DESC;
+```
+14. Highest Infection Rate vs. Population by Country (Over Time)
+``` sql
+Copy
+Edit
+SELECT location,
+       date,
+       population,
+       MAX(total_cases) AS HIGHESTINFECTIONCOUNT,
+       (MAX(total_cases)::numeric / population) * 100 AS Percentagepopulationinfected
+FROM coviddeaths
+GROUP BY location, population, date
+ORDER BY Percentagepopulationinfected DESC, location;
+```
+
+##📌 Summary
+This project performs a variety of COVID-19 data analysis tasks using SQL, including:
+
+Infection and death rate calculations
+
+Vaccination progress tracking
+
+Trend analysis by country and continent
+
+Creating views, CTEs, and temporary tables
+
+Data visualization using Tableau
+
+By using advanced SQL techniques (joins, window functions, aggregation, etc.), this project extracts valuable public health insights from real-world COVID-19 data sources.
+
+
 
