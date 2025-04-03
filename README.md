@@ -189,7 +189,7 @@ GROUP BY location, population, date
 ORDER BY Percentagepopulationinfected DESC, location;
 ```
 
-##📌 Summary
+## 📌 Summary
 This project performs a variety of COVID-19 data analysis tasks using SQL, including:
 
 Infection and death rate calculations
